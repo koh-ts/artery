@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated on 2018-12-05 22:12:04.198693 by $Id$
+  options: -n bunkyo-ku.net.xml <doubleminus>flow=1 <doubleminus>route-file=bunkyo-ku_un_fixed.rou.xml
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <flow id="0" begin="0" end="3600" period="1" from="91848875#0" to="-458842543"/>
+</routes>

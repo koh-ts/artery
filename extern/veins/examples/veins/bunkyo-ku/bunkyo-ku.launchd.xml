@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- debug config -->
+<launch>
+	<copy file="bunkyo-ku.net.xml" />
+	<copy file="bunkyo-ku.rou.xml" />
+	<copy file="bunkyo-ku.poly.xml" />
+	<copy file="bunkyo-ku.sumo.cfg" type="config" />
+</launch>
+

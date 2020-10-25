@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<routes>
+	<vType accel="2.6" color="1,1,0" decel="4.5" id="vtype0" length="2.5" maxSpeed="14" minGap="2.5" sigma="0.5"/>
+	<route edges="0/2to1/2 1/2to1/1 1/1to0/1 0/1to0/2" id="route0"/>
+	<flow begin="200" id="flow0" number="6000" period="0.5" route="route0" type="vtype0"/>
+	<route edges="1/2to2/2 2/2to2/1 2/1to1/1 1/1to1/2" id="route1"/>
+	<flow begin="200" id="flow1" number="6000" period="0.5" route="route1" type="vtype0"/>
+	<route edges="1/1to2/1 2/1to2/0 2/0to1/0 1/0to1/1" id="route2"/>
+	<flow begin="200" id="flow2" number="6000" period="0.5" route="route2" type="vtype0"/>
+	<route edges="0/1to1/1 1/1to1/0 1/0to0/0 0/0to0/1" id="route3"/>
+	<flow begin="200" id="flow3" number="6000" period="0.5" route="route3" type="vtype0"/>
+	<route edges="2/2to1/2 1/2to0/2 0/2to0/1 0/1to0/0 0/0to1/0 1/0to2/0 2/0to2/1 2/1to2/2" id="route4"/>
+	<flow begin="200" id="flow4" number="6000" period="0.5" route="route4" type="vtype0"/>
+</routes>

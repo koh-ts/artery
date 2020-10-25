@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!-- generated on 2019-03-11 14:14:06.526459 by $Id: randomTrips.py 19495 2015-12-02 12:36:28Z behrisch $
+  options: -n paris.net.xml -e 50 -r paris.rou.xml
+-->
+<trips>
+    <trip id="0" depart="0.00" from="618970081#1" to="333459477" />
+    <trip id="1" depart="1.00" from="24760286#3" to="27591260#10" />
+    <trip id="2" depart="2.00" from="312337578#5" to="24760333" />
+    <trip id="3" depart="3.00" from="-4039834" to="-5213138#0" />
+    <trip id="4" depart="4.00" from="206866285#1" to="32693231" />
+    <trip id="5" depart="5.00" from="304970496#1" to="-79687363#1" />
+    <trip id="6" depart="6.00" from="80861654#0" to="14349784#0" />
+    <trip id="7" depart="7.00" from="132800038#3" to="94404961" />
+    <trip id="8" depart="8.00" from="542212017#0" to="299348143#5" />
+    <trip id="9" depart="9.00" from="83591805#7" to="111548573#6" />
+    <trip id="10" depart="10.00" from="373285007" to="32686598#1" />
+    <trip id="11" depart="11.00" from="15080811#0" to="23244741#0" />
+    <trip id="12" depart="12.00" from="374120081#0" to="4517268#0" />
+    <trip id="13" depart="13.00" from="27591260#5" to="14333935#1" />
+    <trip id="14" depart="14.00" from="122245682#1" to="5210402#0" />
+    <trip id="15" depart="15.00" from="34856617#3" to="5210203#0" />
+    <trip id="16" depart="16.00" from="43373305#0" to="59707249#0" />
+    <trip id="17" depart="17.00" from="83279329#0" to="32664861#5" />
+    <trip id="18" depart="18.00" from="4039658#0" to="-571701530#0" />
+    <trip id="19" depart="19.00" from="4039539#3" to="10665441#1" />
+    <trip id="20" depart="20.00" from="13621408#2" to="-84686443#2" />
+    <trip id="21" depart="21.00" from="14508213#0" to="221126365#5" />
+    <trip id="22" depart="22.00" from="-346960670" to="612001428" />
+    <trip id="23" depart="23.00" from="58780697#0" to="59718914#1" />
+    <trip id="24" depart="24.00" from="12710289" to="606753964" />
+    <trip id="25" depart="25.00" from="609825091#1" to="4783423#0" />
+    <trip id="26" depart="26.00" from="304970496#0" to="12714927" />
+    <trip id="27" depart="27.00" from="491581171#1" to="53538209#4" />
+    <trip id="28" depart="28.00" from="566226257" to="22759907#0" />
+    <trip id="29" depart="29.00" from="618908251#2" to="52511723#6" />
+    <trip id="30" depart="30.00" from="27591260#0" to="32693231" />
+    <trip id="31" depart="31.00" from="80861748" to="25463841#7" />
+    <trip id="32" depart="32.00" from="372386498#1" to="14349190#2" />
+    <trip id="33" depart="33.00" from="656937672#1" to="219044463#0" />
+    <trip id="34" depart="34.00" from="113778102#7" to="12711223#8" />
+    <trip id="35" depart="35.00" from="618908245#1" to="39211859#2" />
+    <trip id="36" depart="36.00" from="49482893#5" to="14508047#0" />
+    <trip id="37" depart="37.00" from="506259789#0" to="-46766923" />
+    <trip id="38" depart="38.00" from="242311573#0" to="601748644#2" />
+    <trip id="39" depart="39.00" from="14320095#1" to="232780483#2" />
+    <trip id="40" depart="40.00" from="19514918#0" to="-59725223#1" />
+    <trip id="41" depart="41.00" from="181170271#1" to="15080811#0" />
+    <trip id="42" depart="42.00" from="-23981759" to="12716208" />
+    <trip id="43" depart="43.00" from="362885120" to="113521559#2" />
+    <trip id="44" depart="44.00" from="662409824#11" to="90118564#0" />
+    <trip id="45" depart="45.00" from="242311749#1" to="153793721#1" />
+    <trip id="46" depart="46.00" from="-13621625#2" to="-14647362" />
+    <trip id="47" depart="47.00" from="618970051" to="59707874#1" />
+    <trip id="48" depart="48.00" from="-45479377#4" to="618908245#2" />
+    <trip id="49" depart="49.00" from="12715286#3" to="148568415#0" />
+</trips>

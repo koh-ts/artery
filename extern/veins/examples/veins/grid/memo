@@ -1,0 +1,1 @@
+netgenerate -g true --grid.number 3 --grid.length 100
