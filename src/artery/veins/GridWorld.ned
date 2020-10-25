@@ -13,7 +13,7 @@ import ned.DatarateChannel;
 import inet.visualizer.integrated.IntegratedVisualizer;
 import inet.node.rip.RIPRouter;
 
-
+//
 network GridWorld
 {
     parameters:
@@ -27,7 +27,7 @@ network GridWorld
         @display("bgb=620,620");
 
     types:
-        channel ethline extends DatarateChannel
+        channel ethline extends DatarateChannel // maybe this channel defines the ethernet speed of RSUs
         {
             datarate = 10Gbps;
         }
