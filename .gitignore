@@ -12,3 +12,7 @@ out/
 output/
 results/
 /.metadata/
+
+.settings
+.project
+.cproject
