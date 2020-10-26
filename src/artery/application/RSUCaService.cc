@@ -79,7 +79,7 @@ void RSUCaService::sendCAMWithPacket(omnetpp::cPacket* pk) {
   request.destination_port = btp::ports::CAM;
   request.gn.its_aid = aid::CA;
   request.gn.transport_type = geonet::TransportType::SHB;
-  request.gn.maximum_lifetime = geonet::Lifetime { geonet::Lifetime::Base::_1_S, 1 };
+  request.gn.maximum_lifetime = geonet::Lifetime { geonet::Lifetime::Base::One_Second, 1 };
   request.gn.traffic_class.tc_id(static_cast<unsigned>(dcc::Profile::DP2));
   request.gn.communication_profile = geonet::CommunicationProfile::ITS_G5;
   CaObject obj(std::move(cam));
@@ -325,7 +325,7 @@ void RSUCaService::sendCam(const SimTime& T_now)
     request.destination_port = btp::ports::CAM;
     request.gn.its_aid = aid::CA;
     request.gn.transport_type = geonet::TransportType::SHB;
-    request.gn.maximum_lifetime = geonet::Lifetime { geonet::Lifetime::Base::_1_S, 1 };
+    request.gn.maximum_lifetime = geonet::Lifetime { geonet::Lifetime::Base::One_Second, 1 };
     request.gn.traffic_class.tc_id(static_cast<unsigned>(dcc::Profile::DP2));
     request.gn.communication_profile = geonet::CommunicationProfile::ITS_G5;
 

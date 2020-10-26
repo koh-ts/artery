@@ -31,7 +31,8 @@ Clock::duration BurstyTransmitRateControl::delay(const Transmission& tx)
             break;
     };
 
-    return delay;
+    // return delay;
+    return Clock::duration::zero();
 }
 
 Clock::duration BurstyTransmitRateControl::interval(const Transmission& tx)
