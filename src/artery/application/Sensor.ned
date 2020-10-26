@@ -25,5 +25,5 @@ module Sensor extends StandardHost
 {
     parameters:
         @display("i=block/app");
-        string mobilityType = default("artery.veins.Mobility");        
+        // string mobilityType = default("artery.veins.Mobility");        
 }
