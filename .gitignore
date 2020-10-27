@@ -16,3 +16,5 @@ results/
 .settings
 .project
 .cproject
+
+.vscode/
