@@ -33,6 +33,8 @@ using namespace veins;
 
 using std::unique_ptr;
 
+#define DBG_MAC EV
+
 Define_Module(veins::Mac1609_4);
 
 const simsignal_t Mac1609_4::sigChannelBusy = registerSignal("org_car2x_veins_modules_mac_sigChannelBusy");
@@ -147,6 +149,19 @@ void Mac1609_4::initialize(int stage)
         statsNumBackoff = 0;
         statsSlotsBackoff = 0;
         statsTotalBusyTime = 0;
+
+        if (std::strstr(this->getFullPath().c_str(),"GridWorld") != NULL && std::strstr(this->getFullPath().c_str(), "pcam[24]") != NULL) {
+            std::string output = par("outputDir");
+            output += "output_" + (std::string)this->getFullPath() + ".txt";
+            ofs.open(output, std::ios::out);
+        } else if (std::strstr(this->getFullPath().c_str(),"BunkyoWorld") != NULL && std::strstr(this->getFullPath().c_str(), "pcam[0]") != NULL) {
+            std::string output = par("outputDir");
+            output += "output_" + (std::string)this->getFullPath() + ".txt";
+            ofs.open(output, std::ios::out);
+        }
+
+        simStartTime = par("simStartTime");
+        simEndTime = par("simEndTime");
 
         idleChannel = true;
         lastBusy = simTime();
@@ -297,10 +312,29 @@ void Mac1609_4::handleUpperMsg(cMessage* msg)
     if (num == -1) {
         statsDroppedPackets++;
         return;
+    } else {
+        currentQueueSize = num;
     }
 
-    // if this packet is not at the front of a new queue we dont have to reevaluate times
-    EV_TRACE << "sorted packet into queue of EDCA " << static_cast<int>(chan) << " this packet is now at position: " << num << std::endl;
+    // // if this packet is not at the front of a new queue we dont have to reevaluate times
+    // EV_TRACE << "sorted packet into queue of EDCA " << static_cast<int>(chan) << " this packet is now at position: " << num << std::endl;
+
+    //if this packet is not at the front of a new queue we dont have to reevaluate times
+    // DBG_MAC << "sorted packet into queue of EDCA " << chan << " this packet is now at position: " << num << std::endl;
+
+    if (ofs) {
+        if (simTime() > simStartTime && simTime() < simEndTime) {
+        int queueSize = par("queueSize");
+        ofs << "time: "
+        << simTime()
+        << "\tqueue rate: "
+        << (num * 1.0) / queueSize
+        << endl;
+        }
+    }
+
+    //  if (strstr(this->getFullPath().c_str(), "pcam[24]") != NULL)
+    //    std::cout << "queue size is " << num << std::endl;
 
     if (chan == activeChannel) {
         EV_TRACE << "this packet is for the currently active channel" << std::endl;
@@ -1134,6 +1168,15 @@ void Mac1609_4::handleRetransmit(t_access_category ac)
         simtime_t nextEvent = myEDCA[ChannelType::control]->startContent(lastIdle, guardActive());
         scheduleAt(nextEvent, nextMacEvent);
     }
+}
+
+double Mac1609_4::getQueueRatio() {
+  int queueSize = par("queueSize");
+  if (queueSize == 0)
+    return 0;
+  else {
+    return currentQueueSize * 1.0 / queueSize;
+  }
 }
 
 Mac1609_4::EDCA::EDCAQueue::EDCAQueue(int aifsn, int cwMin, int cwMax, t_access_category ac)

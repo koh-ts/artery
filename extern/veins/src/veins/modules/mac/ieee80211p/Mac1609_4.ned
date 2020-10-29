@@ -68,6 +68,11 @@ simple Mac1609_4 extends BaseMacLayer
         bool useAcks = default(false);
         double ackErrorRate = default(0.20);
 
+        double simStartTime = default(200);
+        double simEndTime = default(600);
+        
+        string outputDir = default("../../output/");
+
         // signal informing interested application about channel busy state
         @signal[org_car2x_veins_modules_mac_sigChannelBusy](type=bool);
         // signal informing interested application about a collision

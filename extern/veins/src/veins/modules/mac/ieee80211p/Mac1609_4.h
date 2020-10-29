@@ -42,6 +42,9 @@
 #include "veins/modules/utility/ConstsPhy.h"
 #include "veins/modules/utility/HasLogProxy.h"
 
+#include <iostream>
+#include <fstream>
+
 namespace veins {
 
 /**
@@ -175,6 +178,8 @@ public:
      * @param ccaThreshold_dBm the cca threshold in dBm
      */
     void setCCAThreshold(double ccaThreshold_dBm);
+
+double getQueueRatio();
 
 protected:
     /** @brief States of the channel selecting operation.*/
@@ -310,6 +315,11 @@ protected:
     std::set<unsigned long> handledUnicastToApp;
 
     Mac80211pToPhy11pInterface* phy11p;
+
+    std::ofstream ofs;
+    double simStartTime;
+    double simEndTime;
+    int currentQueueSize = 0;
 };
 
 } // namespace veins
