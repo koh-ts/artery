@@ -107,7 +107,8 @@ simple IPv4
         @signal[NF_IPv4_DATA_ON_NONRPF](type=inet::IPv4Datagram);
         @signal[NF_IPv4_DATA_ON_RPF](type=inet::IPv4Datagram);
         @signal[NF_IPv4_MDATA_REGISTER](type=inet::IPv4Datagram);
-    gates:
+        int ttl = default(100);
+        gates:
         input transportIn[] @labels(IPv4ControlInfo/down,TCPSegment,UDPPacket);
         output transportOut[] @labels(IPv4ControlInfo/up,TCPSegment,UDPPacket);
         input arpIn @labels(ARPPacket+Ieee802Ctrl);

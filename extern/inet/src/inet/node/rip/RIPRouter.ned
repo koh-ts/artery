@@ -19,6 +19,7 @@
 package inet.node.rip;
 
 import inet.node.inet.Router;
+import org.car2x.veins.base.modules.IMobility;
 
 
 //
@@ -27,6 +28,11 @@ import inet.node.inet.Router;
 module RIPRouter extends Router
 {
     parameters:
+        string mobilityType = default("artery.veins.Mobility");
         hasRIP = true;
+    submodules:
+        mobility: <mobilityType> like IMobility {
+        }
+
 }
 

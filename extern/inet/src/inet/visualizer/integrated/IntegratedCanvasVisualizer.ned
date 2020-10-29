@@ -91,10 +91,10 @@ module IntegratedCanvasVisualizer like IIntegratedVisualizer
             parameters:
                 @display("p=150,350");
         }
-        mobilityVisualizer: <mobilityVisualizerType> like IMobilityVisualizer if mobilityVisualizerType != "" {
-            parameters:
-                @display("p=150,450");
-        }
+        // mobilityVisualizer: <mobilityVisualizerType> like IMobilityVisualizer if mobilityVisualizerType != "" {
+        //     parameters:
+        //         @display("p=150,450");
+        // }
         statisticVisualizer: <statisticVisualizerType> like IStatisticVisualizer if statisticVisualizerType != "" {
             parameters:
                 @display("p=150,550");

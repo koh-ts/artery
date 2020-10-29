@@ -54,7 +54,7 @@ module NodeBase like INetworkNode
         int numTunInterfaces = default(0);
         string osgModel = default(""); // 3D model for OSG visualization, no 3D model by default
         string osgModelColor = default(""); // tint color, no colorization by default
-        string mobilityType = default(numRadios > 0 ? "StationaryMobility" : "");
+        // string mobilityType = default(numRadios > 0 ? "StationaryMobility" : "");
         string networkLayerType = default("IPv4NetworkLayer");
         string routingTableType = default("IPv4RoutingTable");
         bool forwarding = default(true);
@@ -67,7 +67,7 @@ module NodeBase like INetworkNode
         *.interfaceTableModule = default(absPath(".interfaceTable"));
         *.routingTableModule = default(routingTableType != "" ? absPath(".routingTable") : "");
         *.energySourceModule = default(energyStorageType != "" ? absPath(".energyStorage") : "");
-        *.mobilityModule = default(mobilityType != "" ? absPath(".mobility") : "");
+        // *.mobilityModule = default(mobilityType != "" ? absPath(".mobility") : "");
     gates:
         input radioIn[numRadios] @directIn;
         inout pppg[] @labels(PPPFrame-conn);
@@ -89,10 +89,10 @@ module NodeBase like INetworkNode
                 @display("p=50,150;i=block/plug;is=s");
         }
         // optional mobility module. Required only if wireless cards are present
-        mobility: <mobilityType> like IMobility if mobilityType != "" {
-            parameters:
-                @display("p=53,200");
-        }
+        // mobility: <mobilityType> like IMobility if mobilityType != "" {
+        //     parameters:
+        //         @display("p=53,200");
+        // }
         // network layer
         networkLayer: <networkLayerType> like INetworkLayer {
             parameters:

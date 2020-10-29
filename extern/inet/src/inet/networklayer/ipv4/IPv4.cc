@@ -184,8 +184,14 @@ void IPv4::handleIncomingDatagram(IPv4Datagram *datagram, const InterfaceEntry *
         }
     }
 
-    // hop counter decrement
-    datagram->setTimeToLive(datagram->getTimeToLive() - 1);
+    // // hop counter decrement
+    // datagram->setTimeToLive(datagram->getTimeToLive() - 1);
+    if(datagram->getTimeToLive() > ttlThreshold) {
+      datagram->setTimeToLive(ttlThreshold);
+    } else {
+      // hop counter decrement
+      datagram->setTimeToLive(datagram->getTimeToLive() - 1);
+    }
 
     EV_DETAIL << "Received datagram `" << datagram->getName() << "' with dest=" << datagram->getDestAddress() << "\n";
 

@@ -102,6 +102,8 @@ class INET_API IPv4 : public QueueBase, public INetfilter, public ILifecycle, pu
     typedef std::list<QueuedDatagramForHook> DatagramQueueForHooks;
     DatagramQueueForHooks queuedDatagramsForHooks;
 
+    // tll
+    int ttlThreshold = 100;
   protected:
     // utility: look up interface from getArrivalGate()
     virtual const InterfaceEntry *getSourceInterfaceFrom(cPacket *packet);
