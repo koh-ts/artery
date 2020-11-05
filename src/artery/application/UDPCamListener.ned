@@ -16,6 +16,7 @@
 package artery.application;
 
 import inet.applications.contract.IUDPApp;
+import inet.applications.udpapp.UDPBasicApp;
 
 //
 // TODO auto-generated module

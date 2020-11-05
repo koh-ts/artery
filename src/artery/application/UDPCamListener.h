@@ -24,7 +24,7 @@
 #include "inet/transportlayer/contract/udp/UDPSocket.h"
 #include <iostream>
 #include <fstream>
-
+#include "artery/application/CaObject.h"
 
 namespace artery {
 

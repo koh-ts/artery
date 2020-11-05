@@ -10,6 +10,7 @@
 #include "artery/application/MultiChannelPolicy.h"
 #include "artery/application/VehicleDataProvider.h"
 #include "artery/utility/simtime_cast.h"
+// #include "artery/veins/VeinsMobility.h"
 #include "veins/base/utils/Coord.h"
 #include <boost/units/cmath.hpp>
 #include <boost/units/systems/si/prefixes.hpp>
@@ -19,6 +20,7 @@
 #include <vanetza/dcc/transmit_rate_control.hpp>
 #include <vanetza/facilities/cam_functions.hpp>
 #include <chrono>
+// #include "artery/application/UDPCamListener.h"
 
 namespace artery
 {

@@ -32,9 +32,11 @@
 namespace artery
 {
 
-Define_Module(UDPCamListener);
+using namespace omnetpp;
 
 simsignal_t UDPCamListener::rcvdPkSignal = cComponent::registerSignal("campktrcv");
+
+Define_Module(UDPCamListener);
 
 void UDPCamListener::initialize(int stage)
 {
